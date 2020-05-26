@@ -1,6 +1,5 @@
-﻿using UnityEngine;
-using System.Collections;
-using DG.Tweening;
+﻿using DG.Tweening;
+using UnityEngine;
 
 public class HoverPreview : MonoBehaviour
 {
@@ -18,7 +17,7 @@ public class HoverPreview : MonoBehaviour
     private static bool _PreviewsAllowed = true;
     public static bool PreviewsAllowed
     {
-        get { return _PreviewsAllowed; }
+        get => _PreviewsAllowed;
 
         set
         {
@@ -31,41 +30,41 @@ public class HoverPreview : MonoBehaviour
     private bool _thisPreviewEnabled = false;
     public bool ThisPreviewEnabled
     {
-        get { return _thisPreviewEnabled; }
+        get => this._thisPreviewEnabled;
 
         set
         {
-            _thisPreviewEnabled = value;
-            if (!_thisPreviewEnabled)
-                StopThisPreview();
+            this._thisPreviewEnabled = value;
+            if (!this._thisPreviewEnabled)
+                this.StopThisPreview();
         }
     }
 
     public bool OverCollider { get; set; }
 
     // MONOBEHVIOUR METHODS
-    void Awake()
+    private void Awake()
     {
-        ThisPreviewEnabled = ActivateInAwake;
+        this.ThisPreviewEnabled = this.ActivateInAwake;
     }
 
-    void OnMouseEnter()
+    private void OnMouseEnter()
     {
-        OverCollider = true;
-        if (PreviewsAllowed && ThisPreviewEnabled)
-            PreviewThisObject();
+        this.OverCollider = true;
+        if (PreviewsAllowed && this.ThisPreviewEnabled)
+            this.PreviewThisObject();
     }
 
-    void OnMouseExit()
+    private void OnMouseExit()
     {
-        OverCollider = false;
+        this.OverCollider = false;
 
         if (!PreviewingSomeCard())
             StopAllPreviews();
     }
 
     // OTHER METHODS
-    void PreviewThisObject()
+    private void PreviewThisObject()
     {
         // 1) clone this card 
         // first disable the previous preview if there is one already
@@ -73,25 +72,25 @@ public class HoverPreview : MonoBehaviour
         // 2) save this HoverPreview as curent
         currentlyViewing = this;
         // 3) enable Preview game object
-        previewGameObject.SetActive(true);
+        this.previewGameObject.SetActive(true);
         // 4) disable if we have what to disable
-        if (TurnThisOffWhenPreviewing != null)
-            TurnThisOffWhenPreviewing.SetActive(false);
+        if (this.TurnThisOffWhenPreviewing != null)
+            this.TurnThisOffWhenPreviewing.SetActive(false);
         // 5) tween to target position
-        previewGameObject.transform.localPosition = Vector3.zero;
-        previewGameObject.transform.localScale = Vector3.one;
+        this.previewGameObject.transform.localPosition = Vector3.zero;
+        this.previewGameObject.transform.localScale = Vector3.one;
 
-        previewGameObject.transform.DOLocalMove(TargetPosition, 1f).SetEase(Ease.OutQuint);
-        previewGameObject.transform.DOScale(TargetScale, 1f).SetEase(Ease.OutQuint);
+        this.previewGameObject.transform.DOLocalMove(this.TargetPosition, 1f).SetEase(Ease.OutQuint);
+        this.previewGameObject.transform.DOScale(this.TargetScale, 1f).SetEase(Ease.OutQuint);
     }
 
-    void StopThisPreview()
+    private void StopThisPreview()
     {
-        previewGameObject.SetActive(false);
-        previewGameObject.transform.localScale = Vector3.one;
-        previewGameObject.transform.localPosition = Vector3.zero;
-        if (TurnThisOffWhenPreviewing != null)
-            TurnThisOffWhenPreviewing.SetActive(true);
+        this.previewGameObject.SetActive(false);
+        this.previewGameObject.transform.localScale = Vector3.one;
+        this.previewGameObject.transform.localPosition = Vector3.zero;
+        if (this.TurnThisOffWhenPreviewing != null)
+            this.TurnThisOffWhenPreviewing.SetActive(true);
     }
 
     // STATIC METHODS
