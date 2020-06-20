@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41e206fc57f453a42b932de9e94caabf, type: 3}
   m_Name: GreenDragon
   m_EditorClassIdentifier: 
-  characterAsset: {fileID: 0}
+  characterAsset: {fileID: 11400000, guid: 595d588c3cb43a54abca8aa1789a080c, type: 2}
   Description: 
   CardImage: {fileID: 6521977408015004258, guid: cbac94956050fcf42873de6af7b742fe,
     type: 3}
