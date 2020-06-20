@@ -1070,8 +1070,8 @@ MonoBehaviour:
   NameText: {fileID: 6353137564365821530}
   ManaCostText: {fileID: 6353137564342506306}
   DescriptionText: {fileID: 6353137563844331590}
-  HealthText: {fileID: 0}
-  AttackText: {fileID: 0}
+  HealthText: {fileID: 4686267098025049292}
+  AttackText: {fileID: 4686267096971271008}
   CardTopRibbonImage: {fileID: 6353137564822551738}
   CardLowRibbonImage: {fileID: 6353137563955257776}
   CardGraphicsImage: {fileID: 6353137564300038551}
@@ -2369,6 +2369,7 @@ GameObject:
   - component: {fileID: 6474850935564900843}
   - component: {fileID: 4663102877372060798}
   - component: {fileID: 4681876033009929781}
+  - component: {fileID: 4382517762759309354}
   m_Layer: 0
   m_Name: Creature
   m_TagString: Untagged
@@ -2421,7 +2422,25 @@ MonoBehaviour:
   TargetPosition: {x: 2, y: 0, z: 0}
   TargetScale: 2
   previewGameObject: {fileID: 6353137563875640437}
-  ActivateInAwake: 0
+  ActivateInAwake: 1
+--- !u!114 &4382517762759309354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6474850935564900842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b27f742e22337a748aab1c0dc10e5cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardAsset: {fileID: 11400000, guid: 03b7b27bf77f31b44b43c513cebcdee3, type: 2}
+  PreviewManager: {fileID: 6038354148730006265}
+  HealthText: {fileID: 4681876032111649107}
+  AttackText: {fileID: 4681876033205356287}
+  CreatureGraphicImage: {fileID: 6474850933976550408}
+  CreatureGlowImage: {fileID: 879411077794571564}
 --- !u!1 &7282976508664543803
 GameObject:
   m_ObjectHideFlags: 0
