@@ -517,6 +517,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &311066246 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1212515461831180110, guid: 598d19e0de9812541a09784c28617881,
+    type: 3}
+  m_PrefabInstance: {fileID: 777544447}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &356954144
 GameObject:
   m_ObjectHideFlags: 0
@@ -758,6 +770,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5978309258488593766, guid: 28e015405c0e30f4181be5d49b0241ad,
+        type: 3}
+      propertyPath: HeroPowerIconImage
+      value: 
+      objectReference: {fileID: 1720050671}
+    - target: {fileID: 5978309258488593766, guid: 28e015405c0e30f4181be5d49b0241ad,
+        type: 3}
+      propertyPath: HeroPowerBackgroundImage
+      value: 
+      objectReference: {fileID: 311066246}
+    - target: {fileID: 5978309258488593766, guid: 28e015405c0e30f4181be5d49b0241ad,
+        type: 3}
+      propertyPath: characterAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 2c83474fa640c5a4597c116a33940dd3,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28e015405c0e30f4181be5d49b0241ad, type: 3}
 --- !u!4 &459511623 stripped
@@ -2303,6 +2331,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 777544447}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1720050671 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3293467036136802315, guid: 598d19e0de9812541a09784c28617881,
+    type: 3}
+  m_PrefabInstance: {fileID: 777544447}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1762045074
 PrefabInstance:
   m_ObjectHideFlags: 0

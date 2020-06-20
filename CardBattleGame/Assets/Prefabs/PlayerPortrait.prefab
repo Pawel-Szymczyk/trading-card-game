@@ -183,6 +183,7 @@ GameObject:
   m_Component:
   - component: {fileID: 316157150160174983}
   - component: {fileID: 2093846732676903442}
+  - component: {fileID: 5978309258488593766}
   m_Layer: 0
   m_Name: PlayerPortrait
   m_TagString: Untagged
@@ -218,6 +219,24 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.0957117, y: 3.4516373, z: 0.01}
   m_Center: {x: 0.021638155, y: 0.03200245, z: 0}
+--- !u!114 &5978309258488593766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 316157150160174982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c55364e51b79b4f42a2eec63f6f57ec1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterAsset: {fileID: 11400000, guid: 2c83474fa640c5a4597c116a33940dd3, type: 2}
+  HealthText: {fileID: 2108002024630159167}
+  HeroPowerIconImage: {fileID: 0}
+  HeroPowerBackgroundImage: {fileID: 0}
+  PortraitImage: {fileID: 316157149594774116}
+  PortraitBackgroundImage: {fileID: 4108463676220169505}
 --- !u!1 &316157150683082477
 GameObject:
   m_ObjectHideFlags: 0
