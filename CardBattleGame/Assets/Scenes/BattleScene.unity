@@ -780,12 +780,6 @@ PrefabInstance:
       propertyPath: HeroPowerBackgroundImage
       value: 
       objectReference: {fileID: 311066246}
-    - target: {fileID: 5978309258488593766, guid: 28e015405c0e30f4181be5d49b0241ad,
-        type: 3}
-      propertyPath: characterAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 2c83474fa640c5a4597c116a33940dd3,
-        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28e015405c0e30f4181be5d49b0241ad, type: 3}
 --- !u!4 &459511623 stripped
