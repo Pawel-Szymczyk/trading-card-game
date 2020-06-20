@@ -21,7 +21,6 @@ public class DragOnTargetTest : DraggingActionsTest
 
     public override void OnStartDrag()
     {
-        triangleSR.enabled = true;
         sr.enabled = true;
         lr.enabled = true;
     }
