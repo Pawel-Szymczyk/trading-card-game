@@ -207,6 +207,8 @@ GameObject:
   - component: {fileID: 2783889027057544679}
   - component: {fileID: 2783889027057544676}
   - component: {fileID: 2783889027057544677}
+  - component: {fileID: 4016965310491399775}
+  - component: {fileID: 1302007159302949506}
   m_Layer: 0
   m_Name: CreatureCard
   m_TagString: Untagged
@@ -303,6 +305,30 @@ MonoBehaviour:
   TargetScale: 2.5
   previewGameObject: {fileID: 2783889029022042053}
   ActivateInAwake: 0
+--- !u!114 &4016965310491399775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2783889027057544674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5d17371b79f32a4db9e686b536e8bd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1302007159302949506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2783889027057544674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0764230e55c24754c8507d1d4315b515, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2783889027131918195
 GameObject:
   m_ObjectHideFlags: 0
