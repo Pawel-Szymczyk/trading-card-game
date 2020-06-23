@@ -1,63 +1,50 @@
-﻿using System;
+﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
 public class Command
 {
-    public static Queue<Command> commandQueue = new Queue<Command>();
+    public static Queue<Command> CommandQueue = new Queue<Command>();
     public static bool playingQueue = false;
 
     public virtual void AddToQueue()
     {
-        commandQueue.Enqueue(this);
-        if(!playingQueue)
-        {
+        CommandQueue.Enqueue(this);
+        if (!playingQueue)
             PlayFirstCommandFromQueue();
-        }
     }
 
     public virtual void StartCommandExecution()
     {
-        // list of everything that we havae to do with this command (draw card, play a card, play spell effect, etc.)
-        // there are 2 options of timing
-        // #1. use tween sequences and call CommandExecutionComplete in OnComplete()
-        // #2. use coroutines (IEnumerator) and WaitFor... to introduce delays, call CommandExecutionComplete()
+        // list of everything that we have to do with this command (draw a card, play a card, play spell effect, etc...)
+        // there are 2 options of timing : 
+        // 1) use tween sequences and call CommandExecutionComplete in OnComplete()
+        // 2) use coroutines (IEnumerator) and WaitFor... to introduce delays, call CommandExecutionComplete() in the end of coroutine
     }
 
     public static void CommandExecutionComplete()
     {
-        if(commandQueue.Count > 0)
-        {
+        if (CommandQueue.Count > 0)
             PlayFirstCommandFromQueue();
-        }
         else
-        {
             playingQueue = false;
-        }
-
-        //if(TurnManager.Instance.whoseTurn != null)
-        //{
-        //    TurnManager.Instance.whoseTurn.HighlightPlayableCards();
-        //}
+        if (TurnManager.Instance.whoseTurn != null)
+            TurnManager.Instance.whoseTurn.HighlightPlayableCards();
     }
 
     public static void PlayFirstCommandFromQueue()
     {
         playingQueue = true;
-        commandQueue.Dequeue().StartCommandExecution();
+        CommandQueue.Dequeue().StartCommandExecution();
     }
 
-    //public static bool CardDrawPending()
-    //{
-    //    foreach (Command command in commandQueue)
-    //    {
-    //        if(command is DrawACardCommand)
-    //        {
-    //            return true;
-    //        }
-    //    }
-
-    //    return false;
-    //}
+    public static bool CardDrawPending()
+    {
+        foreach (Command c in CommandQueue)
+        {
+            if (c is DrawACardCommand)
+                return true;
+        }
+        return false;
+    }
 }
