@@ -1252,6 +1252,18 @@ PrefabInstance:
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28e015405c0e30f4181be5d49b0241ad, type: 3}
+--- !u!114 &772886004 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3496550861792887089, guid: 3eee5601e114f3c4684d2e207f1ca28c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1581594719}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &777544447
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1321,6 +1333,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 598d19e0de9812541a09784c28617881, type: 3}
+--- !u!1 &969433678 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3496550862171326176, guid: 3eee5601e114f3c4684d2e207f1ca28c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1581594719}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &969433680 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3496550862171326178, guid: 3eee5601e114f3c4684d2e207f1ca28c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1581594719}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 969433678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &988140218
 GameObject:
   m_ObjectHideFlags: 0
@@ -1496,6 +1526,7 @@ Transform:
   m_Children:
   - {fileID: 1451519163}
   - {fileID: 420142232}
+  - {fileID: 1734099955}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2358,6 +2389,82 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1734099954
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1734099955}
+  - component: {fileID: 1734099957}
+  - component: {fileID: 1734099956}
+  m_Layer: 0
+  m_Name: TurnManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1734099955
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1734099954}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1342657775}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1734099956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1734099954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9840095c41be3fe4f94430754bfdeb1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RopeGameObject: {fileID: 969433678}
+  RopeSlider: {fileID: 969433680}
+  TimeForOneTurn: 30
+  RopeBurnTime: 20
+  TimerText: {fileID: 772886004}
+  TimerExpired:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1734099957}
+        m_MethodName: EndTurn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1734099957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1734099954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cea22a294f461f4ba1d8ef018b6d4ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CoinCard: {fileID: 0}
 --- !u!4 &1779478033 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 316157150160174983, guid: 28e015405c0e30f4181be5d49b0241ad,
