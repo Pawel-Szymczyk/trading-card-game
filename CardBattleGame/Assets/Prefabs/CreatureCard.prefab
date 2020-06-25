@@ -226,7 +226,7 @@ Transform:
   m_GameObject: {fileID: 2783889027057544674}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.8, y: 1.8, z: 1}
   m_Children:
   - {fileID: 2783889028023732325}
   - {fileID: 2783889028773238702}
@@ -3398,8 +3398,8 @@ MonoBehaviour:
   NameText: {fileID: 2783889028846761768}
   ManaCostText: {fileID: 2783889027841857274}
   DescriptionText: {fileID: 2783889028011040967}
-  HealthText: {fileID: 0}
-  AttackText: {fileID: 0}
+  HealthText: {fileID: 2783889028604777396}
+  AttackText: {fileID: 2783889027281487636}
   CardTopRibbonImage: {fileID: 2783889027942050648}
   CardLowRibbonImage: {fileID: 2783889027196381124}
   CardGraphicsImage: {fileID: 2783889027214757936}

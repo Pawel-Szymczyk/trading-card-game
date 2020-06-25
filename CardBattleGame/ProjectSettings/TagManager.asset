@@ -6,8 +6,8 @@ TagManager:
   tags:
   - LowCreature
   - TopCreature
-  - LowHand
-  - TopHand
+  - LowCard
+  - TopCard
   layers:
   - Default
   - TransparentFX

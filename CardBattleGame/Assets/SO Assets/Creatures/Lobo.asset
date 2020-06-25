@@ -25,4 +25,4 @@ MonoBehaviour:
   specialCreatureAmount: 0
   SpellScriptName: 
   specialSpellAmount: 0
-  Targets: 0
+  Targets: 1
